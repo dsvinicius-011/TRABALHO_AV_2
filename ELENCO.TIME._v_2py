@@ -63,4 +63,4 @@ while (opcao != 0):
     opcao = int(input("Escolha a opção desejada: "))
     print("-"*30)
 
-print("Convocação encerrada com sucesso, tenha um bom jogo!")
+print("Convocação encerrada com sucesso! Tenham ótimo jogo!")
