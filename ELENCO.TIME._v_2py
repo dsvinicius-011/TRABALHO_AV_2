@@ -1,3 +1,4 @@
+#Vetor vazio para adicionarmos os convocados
 jogadores = []
 
 print("=== ELENCO DO TIME ===")
