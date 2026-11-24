@@ -1,0 +1,68 @@
+#Vetor vazio para adicionarmos os convocados
+jogadores = []
+
+print("=== ELENCO DO TIME ===")
+print("1 - Adicionar Jogador\n2 - Visualizar Elenco\n3 - Ver Quantidades de Jogadores\n4 - Verificar se um Jogador está no Elenco\n5 - Remover Jogador\n0 - Sair")
+opcao = int(input("Escolha a opção desejada: "))
+print("-"*30) # usamos para organizar melhor os prints na execução
+while (opcao != 0):
+    match(opcao):
+        case 1:
+            jogador = input("Digite o nome do jogador: ").title() #.title() serve para ajustar o início da palavra com letra maiúscula
+            print("-"*30)
+            if jogador not in jogadores:
+                jogadores.append(jogador)
+                print(f"Jogador(a) {jogador} adicionado ao elenco.")
+                print("-"*30)
+            else:
+                print("Jogador já cadastrado.")
+                print("-"*30)
+
+        case 2:
+            if (len(jogadores) == 0):
+                print("Ainda não há jogadores no elenco.")
+                print("-"*30)
+            else:
+                print(f"Elenco: {jogadores}")
+                print("-"*30)
+
+        case 3:
+            print(f"O elenco possui {len(jogadores)} convocado(s).")
+            print("-"*30)
+        case 4:
+            busca = input("Informe o nome do jogador(a) que deseja buscar no elenco: ").title()
+            print("-"*30)
+            if (busca not in jogadores):
+                print(f"Jogador(a) {busca} não foi convocado(a).")
+                print("-"*30)
+            else:
+                print(f"Jogador(a) {busca} está convocado.")
+                print("-"*30)
+        case 5:
+            remover = input("Informe o nome do jogador(a) que remover do elenco: ").title()
+            print("-"*30)
+            if(len(jogadores) == 0):
+                print("Nenhum jogador(a) convocado.")
+                print("-"*30)
+
+            elif(remover in jogadores):
+                jogadores.remove(remover)
+                print(f"Jogador(a) {remover} removido com sucesso.")
+                print("-"*30)
+            else:
+                print(f"Jogador(a) {remover} não está na lista de convocação.")
+                print("-"*30)
+        case _:
+            print(f"Opção {opcao} inválida, tente novamente.")
+            print("-"*30)
+            print("Informe uma opção entre 0 e 5.")
+            print("-"*30)
+
+
+    print("=== ELENCO DO TIME ===")
+    print("1 - Adicionar Jogador\n2 - Visualizar Elenco\n3 - Ver Quantidades de Jogadores\n4 - Verificar se um Jogador está no Elenco\n5 - Remover Jogador\n0 - Sair")
+   #condição de parada
+    opcao = int(input("Escolha a opção desejada: "))
+    print("-"*30)
+
+print("Convocação encerrada com sucesso! Tenham ótimo jogo!")
