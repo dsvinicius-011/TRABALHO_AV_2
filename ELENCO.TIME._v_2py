@@ -3,11 +3,11 @@ jogadores = []
 print("=== ELENCO DO TIME ===")
 print("1 - Adicionar Jogador\n2 - Visualizar Elenco\n3 - Ver Quantidades de Jogadores\n4 - Verificar se um Jogador está no Elenco\n5 - Remover Jogador\n0 - Sair")
 opcao = int(input("Escolha a opção desejada: "))
-print("-"*30)
+print("-"*30) # usamos para organizar melhor os prints na execução
 while (opcao != 0):
     match(opcao):
         case 1:
-            jogador = input("Digite o nome do jogador: ").title()
+            jogador = input("Digite o nome do jogador: ").title() #.title() serve para ajustar o início da palavra com letra maiúscula
             print("-"*30)
             if jogador not in jogadores:
                 jogadores.append(jogador)
@@ -60,6 +60,7 @@ while (opcao != 0):
 
     print("=== ELENCO DO TIME ===")
     print("1 - Adicionar Jogador\n2 - Visualizar Elenco\n3 - Ver Quantidades de Jogadores\n4 - Verificar se um Jogador está no Elenco\n5 - Remover Jogador\n0 - Sair")
+   #condição de parada
     opcao = int(input("Escolha a opção desejada: "))
     print("-"*30)
 
